@@ -184,6 +184,7 @@ def blogApi(request, id=0):
         return JsonResponse("Failed to update")
     elif request.method == "DELETE":
         blog = Blog.objects.get(B_ID=id)
+        print(id)
         blog.delete()
         return JsonResponse("Deleted Successfully", safe=False)
     else:

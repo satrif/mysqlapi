@@ -11,7 +11,7 @@ class UserHierarchySerializer(serializers.ModelSerializer):
 class UserListSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserList
-        fields = ('UL_ID', 'UL_Login', 'UL_Pass', 'UL_Name', 'UL_Email', 'UL_H', 'UL_Confirmed')
+        fields = ('UL_ID', 'UL_Login', 'UL_Pass', 'UL_Name', 'UL_Email', 'UL_Confirmed')
 
 
 class ArtListSerializer(serializers.ModelSerializer):
@@ -35,7 +35,7 @@ class ArtCmtSerializer(serializers.ModelSerializer):
 class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
-        fields = ('B_ID', 'B_Title', 'B_User', 'B_Date', 'B_Text', 'B_Pics')
+        fields = ('B_ID', 'B_Title', 'B_Date', 'B_Text', 'B_Pics', 'B_UserName', 'B_Login')
 
 
 class BlogCmtSerializer(serializers.ModelSerializer):
