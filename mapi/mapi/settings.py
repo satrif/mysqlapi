@@ -11,21 +11,23 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-# S_KEY = os.environ.get('djkey')
-# SEC_KEY = f"'{S_KEY}'"
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# SECRET_KEY = SEC_KEY
+S_KEY = os.environ.get('djkey')
+SEC_KEY = f"'{S_KEY}'"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SECRET_KEY = SEC_KEY
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_URL = '/Attachments/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "Attachments")
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'mapi/Attachments/'),
+]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'u$sjlovbj795@gh&+m%1*sflyib5z=g^)h$f-9!n5sugm*2yeq'
+# SECRET_KEY = 'u$sjlovbj795@gh&+m%1*sflyib5z=g^)h$f-9!n5sugm*2yeq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
